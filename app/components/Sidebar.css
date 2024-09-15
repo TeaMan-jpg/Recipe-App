@@ -1,0 +1,21 @@
+.animated-underline {
+    position: relative;
+    display: inline-block;
+    color: #d1d5db; /* Tailwind gray-300 */
+    margin-left: 30px;
+  }
+  
+.animated-underline::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 0;
+    background-color: #f87171; /* Tailwind red-400 */
+    transition: width 0.3s ease-in-out;
+  }
+  
+.animated-underline:hover::after {
+    width: 100%;
+  }
